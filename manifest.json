@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Cc plugin",
+  "description": "Lekker klikken, lekker klikken",
+  "version": "3.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.cclub.nl/*"
+      ],
+      "css": [],
+      "js": [
+        "js/jquery-3.1.1.min.js",
+        "insert.js",
+        "init.js",
+        "main.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/logo.png"
+  ],
+  "browser_action": {
+    "default_title": "Settings button",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "images/icon-48x48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
